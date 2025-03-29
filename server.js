@@ -20,6 +20,7 @@ app.use(express.json());
 const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/user.routes');
 const studentRoutes = require('./routes/student.routes');
+const tutorRoutes = require('./routes/tutor.routes');
 
 app.get('/', (req, res) => {
     res.send('API is running...');
@@ -27,6 +28,7 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/student', studentRoutes);
+app.use('/api/tutor', tutorRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
