@@ -21,6 +21,7 @@ const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/user.routes');
 const studentRoutes = require('./routes/student.routes');
 const tutorRoutes = require('./routes/tutor.routes');
+const adminRoutes = require('./routes/admin.routes'); // Add admin routes
 
 app.get('/', (req, res) => {
     res.send('API is running...');
@@ -29,6 +30,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/student', studentRoutes);
 app.use('/api/tutor', tutorRoutes);
+app.use('/api/admin', adminRoutes); // Use admin routes
 
 // Error handling middleware
 app.use((err, req, res, next) => {
